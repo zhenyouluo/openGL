@@ -13,7 +13,7 @@ class cube3d : public QGLWidget{
     Q_OBJECT
 
 public:
-    cube3d();
+    cube3d(QWidget * parent = 0);
 
     void initializeGL();
     GLvoid LoadGLTextures();
@@ -24,7 +24,7 @@ public:
     GLvoid scene();
 
     void rotate();
-    void keyPressEvent(QKeyEvent *);
+    void keyPressEvent(QKeyEvent* );
 
 
 private:

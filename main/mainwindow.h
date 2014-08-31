@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QKeyEvent>
 #include <QPushButton>
 #include <QGLWidget>
 #include "wopengl/cube3d.h"
@@ -25,14 +26,15 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    cube3d cube;
+    void keyPressEvent(QKeyEvent* );
+
+    cube3d * cube;
     world3d w3d;
 
 
     QGLWidget* screen;
 
     QPushButton* Button[BUTTONS];
-    bool b[BUTTONS] = { false, false };
 
 public slots:
 

@@ -1,6 +1,7 @@
 #include "main/mainwindow.h"
 #include "ui_mainwindow.h"
 
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -9,8 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->setFixedSize(800, 600);
 
-    screen = new QGLWidget(this);
-    screen->setGeometry(170, 20, 610, 560);
+    screen = new cube3d(this);
+    screen->setGeometry(170, 20, 620, 550);
 
     Button[0] = new QPushButton(this);
     Button[1] = new QPushButton(this);
@@ -29,25 +30,21 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::keyPressEvent(QKeyEvent *event){
+
+    cube->keyPressEvent(event);
+
+}
+
 void MainWindow::clickButton0(){
 
-    if (b[0] == false)
-        cube.show();
+        cube->show();
 
-    if (b[0] == true)
-        cube.close();
-
-    b[0] =! b[0];
 }
 
 void MainWindow::clickButton1(){
 
-    if (b[1] == false)
         w3d.show();
 
-    if (b[1] == true)
-        w3d.close();
-
-    b[1] =! b[1];
 }
 

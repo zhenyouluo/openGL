@@ -1,7 +1,7 @@
 #include "cube3d.h"
 #include <QtOpenGL>
 
-cube3d::cube3d(){
+cube3d::cube3d(QWidget *parent) : QGLWidget(parent){
     a = 0.4f;
 
     rot_x = 0;    rot_y = 0;
