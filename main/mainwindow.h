@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QPushButton>
+#include <QGLWidget>
 #include "wopengl/cube3d.h"
 #include "wopengl/world3d.h"
 
@@ -27,6 +28,8 @@ private:
     cube3d cube;
     world3d w3d;
 
+
+    QGLWidget* screen;
 
     QPushButton* Button[BUTTONS];
     bool b[BUTTONS] = { false, false };

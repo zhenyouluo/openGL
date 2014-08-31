@@ -9,6 +9,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->setFixedSize(800, 600);
 
+    screen = new QGLWidget(this);
+    screen->setGeometry(170, 20, 610, 560);
+
     Button[0] = new QPushButton(this);
     Button[1] = new QPushButton(this);
 
