@@ -10,28 +10,6 @@
 #include <gl.h>
 #include <glu.h>
 
-//struct SECTOR{
-
-//    int nTriangles;
-//    TRIANGLE* tringle;
-
-//};
-
-//struct TRIANGLE{
-
-//    VERTEX* vertex[3];
-
-//};
-
-//struct VERTEX{
-
-//    float x, y, z;
-//    float u, v;
-
-//};
-
-
-
 class world3d : public QGLWidget{
 
     Q_OBJECT
@@ -62,7 +40,7 @@ private:
 
     GLfloat mat_specular[4]={1.0,1.0,1.0,1.0};
     GLfloat mat_shininess[1]={50.0};
-    GLfloat light_position[4]={1.0,1.0,1.0,0.0};                         //Diffuse light
+    GLfloat light_position[4]={1.0,1.0,1.0,0.0};                          //Diffuse light
     GLfloat white_light[4]={1.0,1.0,1.0,1.0};                             //Position of light
 
 

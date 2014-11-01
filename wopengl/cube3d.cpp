@@ -12,7 +12,7 @@ cube3d::cube3d(QWidget *parent) : QGLWidget(parent){
     timer->start(50);   timer_w = true;
 }
 
-void cube3d::initializeGL(){                                                   //Create background with black colour
+void cube3d::initializeGL(){                                                    //Create background with black colour
 
     LoadGLTextures();															//Load textures
     glEnable(GL_TEXTURE_2D);													//Parameters of texture
@@ -30,9 +30,9 @@ void cube3d::initializeGL(){                                                   /
     glShadeModel(GL_SMOOTH);
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular);
     glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
-    glLightfv(GL_LIGHT0, GL_POSITION, light_position);                    //Create background light
-    glLightfv(GL_LIGHT0, GL_DIFFUSE,  white_light);                       //Create diffuse light
-    glLightfv(GL_LIGHT0, GL_SPECULAR, white_light);                           //Create light position
+    glLightfv(GL_LIGHT0, GL_POSITION, light_position);                          //Create background light
+    glLightfv(GL_LIGHT0, GL_DIFFUSE,  white_light);                             //Create diffuse light
+    glLightfv(GL_LIGHT0, GL_SPECULAR, white_light);                             //Create light position
 
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
@@ -44,7 +44,7 @@ void cube3d::initializeGL(){                                                   /
 
 }
 
-GLvoid cube3d::resizeGL(int nWidth, int nHeight){                              //Resise of window
+GLvoid cube3d::resizeGL(int nWidth, int nHeight){                               //Resise of window
 
     glViewport(0, 0, nWidth, nHeight);
     glMatrixMode(GL_PROJECTION);
@@ -67,34 +67,34 @@ GLvoid cube3d::paintGL(){
 
 GLvoid cube3d::scene(){
 
-    glBegin( GL_QUADS );                                                       //Build cube
+    glBegin( GL_QUADS );                                                        //Build cube
 
-    glTexCoord2f(0.0f, 0.0f); glVertex3d( a, a, a);           //#1 side of cube
+    glTexCoord2f(0.0f, 0.0f); glVertex3d( a, a, a);                             //#1 side of cube
     glTexCoord2f(1.0f, 0.0f); glVertex3d(-a, a, a);
     glTexCoord2f(1.0f, 1.0f); glVertex3d(-a,-a, a);
     glTexCoord2f(0.0f, 1.0f); glVertex3d( a,-a, a);
 
-    glTexCoord2f(0.0f, 0.0f); glVertex3d(-a, a, a);           //#2 side
+    glTexCoord2f(0.0f, 0.0f); glVertex3d(-a, a, a);                             //#2 side
     glTexCoord2f(1.0f, 0.0f); glVertex3d(-a, a,-a);
     glTexCoord2f(1.0f, 1.0f); glVertex3d(-a,-a,-a);
     glTexCoord2f(0.0f, 1.0f); glVertex3d(-a,-a, a);
 
-    glTexCoord2f(0.0f, 0.0f); glVertex3d(-a, a,-a);           //#3 side
+    glTexCoord2f(0.0f, 0.0f); glVertex3d(-a, a,-a);                             //#3 side
     glTexCoord2f(1.0f, 0.0f); glVertex3d( a, a,-a);
     glTexCoord2f(1.0f, 1.0f); glVertex3d( a,-a,-a);
     glTexCoord2f(0.0f, 1.0f); glVertex3d(-a,-a,-a);
 
-    glTexCoord2f(0.0f, 0.0f); glVertex3d( a, a,-a);           //#4 side
+    glTexCoord2f(0.0f, 0.0f); glVertex3d( a, a,-a);                             //#4 side
     glTexCoord2f(1.0f, 0.0f); glVertex3d( a, a, a);
     glTexCoord2f(1.0f, 1.0f); glVertex3d( a,-a, a);
     glTexCoord2f(0.0f, 1.0f); glVertex3d( a,-a,-a);
 
-    glTexCoord2f(0.0f, 0.0f); glVertex3d(-a, a, a);           //#5 side
+    glTexCoord2f(0.0f, 0.0f); glVertex3d(-a, a, a);                             //#5 side
     glTexCoord2f(1.0f, 0.0f); glVertex3d( a, a, a);
     glTexCoord2f(1.0f, 1.0f); glVertex3d( a, a,-a);
     glTexCoord2f(0.0f, 1.0f); glVertex3d(-a, a,-a);
 
-    glTexCoord2f(0.0f, 0.0f); glVertex3d(-a,-a, a);           //#6 side
+    glTexCoord2f(0.0f, 0.0f); glVertex3d(-a,-a, a);                             //#6 side
     glTexCoord2f(1.0f, 0.0f); glVertex3d( a,-a, a);
     glTexCoord2f(1.0f, 1.0f); glVertex3d( a,-a,-a);
     glTexCoord2f(0.0f, 1.0f); glVertex3d(-a,-a,-a);

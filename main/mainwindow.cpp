@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     Button[1] = new QPushButton(this);
 
     Button[0]->setGeometry(20, 20 , 150, 50);   Button[0]->setText("Cube");
-    Button[1]->setGeometry(20, 90, 150, 50);   Button[1]->setText("World");
+    Button[1]->setGeometry(20, 90, 150, 50);    Button[1]->setText("World");
 
     connect(Button[0], SIGNAL(clicked()), this, SLOT(clickButton0()));
     connect(Button[0], SIGNAL(clicked()), this, SLOT(clickButton1()));

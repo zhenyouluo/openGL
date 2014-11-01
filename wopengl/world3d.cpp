@@ -21,8 +21,8 @@ GLvoid world3d::initializeGL(){
     glShadeModel(GL_SMOOTH);
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular);
     glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
-    glLightfv(GL_LIGHT0, GL_POSITION, light_position);                    //Create background light
-    glLightfv(GL_LIGHT0, GL_DIFFUSE,  white_light);                       //Create diffuse light
+    glLightfv(GL_LIGHT0, GL_POSITION, light_position);                        //Create background light
+    glLightfv(GL_LIGHT0, GL_DIFFUSE,  white_light);                           //Create diffuse light
     glLightfv(GL_LIGHT0, GL_SPECULAR, white_light);                           //Create light position
 
     glEnable(GL_LIGHTING);
@@ -101,10 +101,10 @@ GLvoid world3d::LoadGLTextures(){
     glBindTexture(GL_TEXTURE_2D, texture[0]);
     glTexImage2D(GL_TEXTURE_2D, 0, 3, (GLsizei)tImage.width(), (GLsizei)tImage.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE, tImage.bits());
 
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);     // задана линейная фильтрация вблизи
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);     // задана линейная фильтрация вдали
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);  // при фильтрации игнорируются тексели, выходящие за границу текстуры для s координаты
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);  // при фильтрации игнорируются тексели, выходящие за границу текстуры для t координаты
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);         // задана линейная фильтрация вблизи
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);         // задана линейная фильтрация вдали
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);      // при фильтрации игнорируются тексели, выходящие за границу текстуры для s координаты
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);      // при фильтрации игнорируются тексели, выходящие за границу текстуры для t координаты
 
 
 }

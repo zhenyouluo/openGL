@@ -43,9 +43,9 @@ private:
     GLfloat mat_specular[4]={1.0,1.0,1.0,1.0};
     GLfloat mat_shininess[1]={50.0};
 
-    GLfloat BackgroundLightConst[4] = { 0.5f, 0.5f, 0.5f, 1.0f };                      //Background light
-    GLfloat light_position[4]={1.0,1.0,1.0,0.0};                         //Diffuse light
-    GLfloat white_light[4]={1.0,1.0,1.0,1.0};                             //Position of light
+    GLfloat BackgroundLightConst[4] = { 0.5f, 0.5f, 0.5f, 1.0f };                         //Background light
+    GLfloat light_position[4]={1.0,1.0,1.0,0.0};                                          //Diffuse light
+    GLfloat white_light[4]={1.0,1.0,1.0,1.0};                                             //Position of light
 
 public slots:
     void slot_rotate();
